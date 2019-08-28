@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onParamsChange"
+            type="android.databinding.adapters.SeekBarBindingAdapter.OnProgressChanged" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="244dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/black_mask_translucent"
+            android:orientation="horizontal"
+            android:paddingBottom="25dp"
+            android:paddingTop="25dp"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_music_list" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="86dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/black_mask_translucent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerView">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:background="#101010"
+                android:gravity="center"
+                android:text="无音效"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="#101010"
+                android:gravity="center"
+                android:text="音效1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="#101010"
+                android:gravity="center"
+                android:text="音效2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="#101010"
+                android:gravity="center"
+                android:text="音效3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#EE888888"
+            android:gravity="center"
+            android:text="敬请期待"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
+            app:layout_constraintBottom_toBottomOf="@id/linearLayout"
+            app:layout_constraintEnd_toEndOf="@id/linearLayout"
+            app:layout_constraintStart_toStartOf="@id/linearLayout"
+            app:layout_constraintTop_toTopOf="@id/linearLayout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/black_mask_translucent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackgroundBorderless"
+                android:drawableEnd="@mipmap/ic_next_small"
+                android:drawablePadding="9dp"
+                android:text="下一步"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</layout>

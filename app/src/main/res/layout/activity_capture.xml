@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="com.baidu.cloud.mediaproc.sample.ui.shortvideo.viewmodel.CaptureViewModel" />
+
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/activity_capture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.baidu.cloud.mediaproc.sample.ui.shortvideo.CaptureActivity">
+
+            <SurfaceView
+                android:id="@+id/surfaceView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_margin="24dp"
+                android:background="@mipmap/ic_cancel"
+                android:onClick="onClickClose"
+                android:visibility="@{model.isCapturing?View.INVISIBLE:View.VISIBLE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/color_config"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="24dp"
+                android:background="@mipmap/ic_tune"
+                android:onClick="onClickTune"
+                android:visibility="@{model.isCapturing?View.INVISIBLE:View.VISIBLE}"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton6"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintRight_toLeftOf="@+id/imageButton5"
+                app:layout_constraintTop_toTopOf="@+id/imageButton6" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="24dp"
+                android:background="@{model.isFlashOn?@drawable/ic_flash_on:@drawable/ic_flash_off}"
+                android:onClick="@{model::onClickFlash}"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton6"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintRight_toLeftOf="@+id/imageButton2"
+                app:layout_constraintTop_toTopOf="@+id/imageButton6"
+                tools:background="@drawable/ic_flash_off" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="24dp"
+                android:background="@mipmap/ic_switch_camera"
+                android:onClick="@{model::onClickSwitch}"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton6"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageButton6" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/design_bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="200dp"
+            app:elevation="4dp"
+            app:layout_behavior="com.baidu.cloud.mediaproc.sample.widget.WABottomSheetBehavior">
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/background_capture_image_button"
+                android:contentDescription="@string/background_music"
+                android:onClick="onClickBGM"
+                android:src="@mipmap/ic_music"
+                android:visibility="@{model.isCapturing?View.INVISIBLE:View.VISIBLE}"
+                app:layout_constraintBottom_toTopOf="@+id/view"
+                app:layout_constraintEnd_toStartOf="@+id/imageButton7"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/background_capture_image_button"
+                android:contentDescription="@string/custom_filter"
+                android:onClick="onClickFilter"
+                android:src="@mipmap/ic_filter"
+                android:visibility="@{model.isCapturing?View.INVISIBLE:View.VISIBLE}"
+                app:layout_constraintBottom_toTopOf="@+id/view"
+                app:layout_constraintEnd_toStartOf="@+id/imageButton9"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/imageButton8"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/background_capture_image_button"
+                android:contentDescription="@string/beauty_face"
+                android:onClick="onClickBeauty"
+                android:src="@mipmap/ic_beauty_face"
+                android:visibility="@{model.isCapturing?View.INVISIBLE:View.VISIBLE}"
+                app:layout_constraintBottom_toTopOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/imageButton7"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/text_capture_filter_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@{model.filter}"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/white"
+                android:visibility="@{model.isCapturing?View.INVISIBLE:View.VISIBLE}"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton7"
+                tools:text="黑白" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:background="@drawable/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:background="@color/colorAccent" />
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <ImageButton
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="20dp"
+                android:background="@mipmap/ic_cancel_capture"
+                android:onClick="@{model::onClickCancel}"
+                android:visibility="@{model.isCapturing?(model.isPausing?View.VISIBLE:View.INVISIBLE):View.INVISIBLE}"
+                app:backgroundTint="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_capture"
+                app:layout_constraintEnd_toStartOf="@+id/btn_capture"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btn_capture" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/shape_dot_red"
+                android:visibility="@{model.isCapturing?View.VISIBLE:View.INVISIBLE}"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintEnd_toStartOf="@+id/textView"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_marginStart="4dp"
+                android:text="@{@string/capturedTimeFormat(model.capturedTime)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+                android:visibility="@{model.isCapturing?View.VISIBLE:View.INVISIBLE}"
+                app:layout_constraintBottom_toTopOf="@+id/btn_capture"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view1"
+                tools:text="10.2s" />
+
+            <com.baidu.cloud.mediaproc.sample.widget.CaptureProgressView
+                android:id="@+id/btn_capture"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:onClick="@{model::onClickCapture}"
+                android:visibility="@{model.isFragmentAdd?View.INVISIBLE:View.VISIBLE}"
+                app:capture_background="@drawable/background_capture_button"
+                app:capture_circle_starting_degree="-90"
+                app:capture_finished_color="#41C5F6"
+                app:capture_finished_stroke_width="5dp"
+                app:capture_show_text="false"
+                app:capture_suffix_text="s"
+                app:capture_text_color="@android:color/white"
+                app:capture_text_size="22sp"
+                app:capture_unfinished_color="@android:color/white"
+                app:capture_unfinished_stroke_width="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <ImageButton
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="20dp"
+                android:background="@mipmap/ic_done"
+                android:onClick="@{model::onClickFinish}"
+                android:visibility="@{model.isCapturing?(model.isWaitingNextStep?View.INVISIBLE:View.VISIBLE):View.INVISIBLE}"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_capture"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_capture"
+                app:layout_constraintTop_toTopOf="@+id/btn_capture" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>
+

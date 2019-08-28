@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                   
+
+    
+
+                 
+                        
+                                                                                       
+
+                                           
+           
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="132dp"
+        android:layout_height="56dp" android:tag="layout/layout_call_control_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:background="@drawable/background_call_control"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:tag="binding_1"                  
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="00:21" />
+
+        <Button
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="5dp"
+            android:background="@mipmap/ic_call_end"
+            android:tag="binding_2"                   
+            android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+                                                                                 
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+         

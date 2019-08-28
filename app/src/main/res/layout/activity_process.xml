@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="com.baidu.cloud.mediaproc.sample.ui.shortvideo.viewmodel.ProcessViewModel" />
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/activity_config_process"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        tools:context="com.baidu.cloud.mediaproc.sample.ui.shortvideo.PreviewActivity">
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_margin="24dp"
+            android:background="@mipmap/ic_cancel"
+            android:onClick="onClickClose"
+            android:visibility="@{model.isProcessing?View.INVISIBLE:View.VISIBLE}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="85dp"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintDimensionRatio="0.63:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.baidu.cloud.mediaproc.sample.widget.video.BDCloudVideoView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:showCacheInfo="false" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                tools:scaleType="centerCrop"
+                tools:src="@drawable/baidu_cloud_bigger" />
+
+            <ProgressBar
+                android:id="@+id/view_process_progress"
+                style="@style/Widget.ProgressBar.Vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:max="100"
+                android:progress="@{model.processProgress}"
+                tools:progress="82" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="@{model.isProcessing?View.VISIBLE:View.INVISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frameLayout1">
+
+            <FrameLayout
+                android:layout_width="72dp"
+                android:layout_height="72dp">
+
+                <com.baidu.cloud.mediaproc.sample.widget.CaptureProgressView
+                    android:id="@+id/btn_capture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:capture_circle_starting_degree="-90"
+                    app:capture_finished_color="#3098BF"
+                    app:capture_finished_stroke_width="5dp"
+                    app:capture_show_text="false"
+                    app:capture_text_color="@android:color/white"
+                    app:capture_unfinished_color="#17191A"
+                    app:capture_unfinished_stroke_width="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@{model.processProgressTint}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@android:color/white"
+                    tools:text="25%" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:includeFontPadding="false"
+                android:text="@{model.processTint}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                android:textColor="@android:color/white"
+                tools:text="合成中，请稍候…" />
+
+            <Button
+                android:layout_width="58dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/background_process_cancel_button"
+                android:onClick="@{model::cancel}"
+                android:text="@string/cancel"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="@{model.isProcessing?View.INVISIBLE:View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frameLayout1"
+            tools:visibility="invisible">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/transparent"
+                android:drawablePadding="16dp"
+                android:drawableStart="@mipmap/ic_done_no_circle"
+                android:drawableTint="@color/colorAccent"
+                android:text="@{model.processTint}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
+
+            <Button
+                android:layout_width="259dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/background_process_upload_button"
+                android:enabled="@{model.isMediaProcessSuccess?true:false}"
+                android:onClick="@{model::upload}"
+                android:text="发布"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:layout_width="259dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/background_process_save_button"
+                android:enabled="@{model.isMediaProcessSuccess?true:false}"
+                android:gravity="center"
+                android:onClick="@{model::saveToDirectory}"
+                android:text="保存到本地"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
+

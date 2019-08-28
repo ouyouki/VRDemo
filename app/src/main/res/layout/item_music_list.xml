@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="choose"
+            type="android.databinding.ObservableBoolean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="56dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:src="@drawable/baidu_cloud_bigger" />
+
+        <TextView
+            android:id="@+id/item_music_name"
+            style="@style/SettingTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/black_mask_translucent"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            tools:text="歌曲名" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/dialog_music_item_background_active"
+            android:visibility="@{choose?View.VISIBLE:View.INVISIBLE}"
+            tools:visibility="visible" />
+
+    </RelativeLayout>
+</layout>

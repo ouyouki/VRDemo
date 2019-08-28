@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.databinding.ObservableMap" />
+
+        <variable
+            name="paramMap"
+            type="ObservableMap&lt;String,String&gt;" />
+
+        <variable
+            name="progressMap"
+            type="ObservableMap&lt;String,Integer&gt;" />
+
+        <variable
+            name="onResolutionChose"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="onTimeChose"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="onParamsChange"
+            type="android.databinding.adapters.SeekBarBindingAdapter.OnProgressChanged" />
+
+        <variable
+            name="startTrackingTouch"
+            type="android.databinding.adapters.SeekBarBindingAdapter.OnStartTrackingTouch" />
+
+        <variable
+            name="onStopTrackingTouch"
+            type="android.databinding.adapters.SeekBarBindingAdapter.OnStopTrackingTouch" />
+
+        <variable
+            name="isSeeking"
+            type="android.databinding.ObservableBoolean" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@{isSeeking?@drawable/transparent:@drawable/black_mask_translucent}"
+        android:orientation="vertical"
+        tools:background="#80000000">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/base_setting"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white"
+            android:visibility="@{isSeeking?View.INVISIBLE:View.VISIBLE}"
+            app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/dialog_background"
+            android:padding="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/dismiss"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView15">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="规格设置："
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?android:attr/textColorHintInverse"
+                android:visibility="@{isSeeking?View.INVISIBLE:View.VISIBLE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:layout_marginTop="15dp"
+                android:text="码率设置"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                android:visibility="@{isSeeking?View.INVISIBLE:View.VISIBLE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView1" />
+
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="6dp"
+                android:checkedButton="@+id/tune_rs_1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="@{isSeeking?View.INVISIBLE:View.VISIBLE}"
+                app:layout_constraintBottom_toBottomOf="@id/textView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textView2"
+                app:layout_constraintTop_toTopOf="@id/textView2">
+
+                <RadioButton
+                    android:id="@+id/tune_rs_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:onClick="@{onResolutionChose}"
+                    android:text="360p"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_dialog_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/tune_rs_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:onClick="@{onResolutionChose}"
+                    android:text="480p"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_dialog_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/tune_rs_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:onClick="@{onResolutionChose}"
+                    android:text="720p"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_dialog_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/tune_rs_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:onClick="@{onResolutionChose}"
+                    android:text="1080p"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_dialog_radio_button" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/capture_time"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                android:visibility="@{isSeeking?View.INVISIBLE:View.VISIBLE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="6dp"
+                android:checkedButton="@+id/dialog_time_rb1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="@{isSeeking?View.INVISIBLE:View.VISIBLE}"
+                app:layout_constraintBottom_toBottomOf="@id/textView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textView3"
+                app:layout_constraintTop_toTopOf="@id/textView3">
+
+                <RadioButton
+                    android:id="@+id/dialog_time_rb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:onClick="@{onTimeChose}"
+                    android:text="15s"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_dialog_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/dialog_time_rb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:onClick="@{onTimeChose}"
+                    android:text="30s"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_dialog_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/dialog_time_rb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:onClick="@{onTimeChose}"
+                    android:text="45s"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_dialog_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/dialog_time_rb4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:onClick="@{onTimeChose}"
+                    android:text="60s"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_dialog_radio_button" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:text="声音设置"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?android:attr/textColorHintInverse"
+                android:visibility="@{isSeeking?View.INVISIBLE:View.VISIBLE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView3" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/capture_volume"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                android:visibility="@{isSeeking?View.INVISIBLE:View.VISIBLE}"
+                app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+            <SeekBar
+                android:id="@+id/tune_seek_volume"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onProgressChanged="@{onParamsChange}"
+                android:progress="@{progressMap[`volume`]}"
+                android:visibility="@{isSeeking?View.INVISIBLE:View.VISIBLE}"
+                app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                app:layout_constraintEnd_toStartOf="@+id/tvCaptureVolume"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
+                app:layout_constraintTop_toTopOf="@+id/textView5"
+                tools:progress="100" />
+
+            <TextView
+                android:id="@+id/tvCaptureVolume"
+                style="@style/SettingTextStyle"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@{paramMap[`volume`]}"
+                android:textColor="@color/colorAccent"
+                android:visibility="@{isSeeking?View.INVISIBLE:View.VISIBLE}"
+                app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="100%" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView5"
+                android:layout_marginTop="27dp"
+                android:text="@string/setting_image"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?android:attr/textColorHintInverse"
+                android:visibility="@{isSeeking?View.INVISIBLE:View.VISIBLE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/setting_brightness"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView8" />
+
+            <SeekBar
+                android:id="@+id/tune_seek_brightness"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onProgressChanged="@{onParamsChange}"
+                android:onStartTrackingTouch="@{startTrackingTouch}"
+                android:onStopTrackingTouch="@{onStopTrackingTouch}"
+                android:progress="@{progressMap[`brightness`]}"
+                android:splitTrack="false"
+                app:layout_constraintBottom_toBottomOf="@+id/textView16"
+                app:layout_constraintEnd_toStartOf="@+id/tvCaptureVolume"
+                app:layout_constraintStart_toStartOf="@+id/tune_seek_volume"
+                app:layout_constraintTop_toTopOf="@+id/textView16"
+                tools:progress="50" />
+
+            <TextView
+                android:id="@+id/textView17"
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{paramMap[`brightness`]}"
+                app:layout_constraintBottom_toBottomOf="@+id/textView16"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="0.0" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:text="@string/setting_contrast"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView16" />
+
+            <SeekBar
+                android:id="@+id/tune_seek_contrast"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onProgressChanged="@{onParamsChange}"
+                android:onStartTrackingTouch="@{startTrackingTouch}"
+                android:onStopTrackingTouch="@{onStopTrackingTouch}"
+                android:progress="@{progressMap[`contrast`]}"
+                android:splitTrack="false"
+                app:layout_constraintBottom_toBottomOf="@+id/textView19"
+                app:layout_constraintEnd_toStartOf="@+id/tvCaptureVolume"
+                app:layout_constraintStart_toStartOf="@+id/tune_seek_volume"
+                app:layout_constraintTop_toTopOf="@+id/textView19"
+                tools:progress="25" />
+
+            <TextView
+                android:id="@+id/textView25"
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{paramMap[`contrast`]}"
+                app:layout_constraintBottom_toBottomOf="@id/textView19"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="1.0" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:text="@string/setting_saturation"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView19" />
+
+            <SeekBar
+                android:id="@+id/tune_seek_saturation"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onProgressChanged="@{onParamsChange}"
+                android:onStartTrackingTouch="@{startTrackingTouch}"
+                android:onStopTrackingTouch="@{onStopTrackingTouch}"
+                android:progress="@{progressMap[`saturation`]}"
+                android:splitTrack="false"
+                app:layout_constraintBottom_toBottomOf="@+id/textView21"
+                app:layout_constraintEnd_toStartOf="@+id/tvCaptureVolume"
+                app:layout_constraintStart_toStartOf="@+id/tune_seek_volume"
+                app:layout_constraintTop_toTopOf="@+id/textView21"
+                tools:progress="50" />
+
+            <TextView
+                android:id="@+id/textView24"
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{paramMap[`saturation`]}"
+                app:layout_constraintBottom_toBottomOf="@id/textView21"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="1.0" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:text="@string/setting_hue"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView21" />
+
+            <SeekBar
+                android:id="@+id/tune_seek_hue"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onProgressChanged="@{onParamsChange}"
+                android:onStartTrackingTouch="@{startTrackingTouch}"
+                android:onStopTrackingTouch="@{onStopTrackingTouch}"
+                android:progress="@{progressMap[`hue`]}"
+                android:splitTrack="false"
+                app:layout_constraintBottom_toBottomOf="@+id/textView23"
+                app:layout_constraintEnd_toStartOf="@+id/tvCaptureVolume"
+                app:layout_constraintStart_toStartOf="@+id/tune_seek_volume"
+                app:layout_constraintTop_toTopOf="@+id/textView23"
+                tools:progress="50" />
+
+            <TextView
+                android:id="@+id/textView22"
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{paramMap[`hue`]}"
+                app:layout_constraintBottom_toBottomOf="@+id/textView23"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="0.0" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:text="@string/setting_sharpness"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView23" />
+
+            <SeekBar
+                android:id="@+id/tune_seek_sharpness"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onProgressChanged="@{onParamsChange}"
+                android:onStartTrackingTouch="@{startTrackingTouch}"
+                android:onStopTrackingTouch="@{onStopTrackingTouch}"
+                android:progress="@{progressMap[`sharpness`]}"
+                android:splitTrack="false"
+                app:layout_constraintBottom_toBottomOf="@+id/textView26"
+                app:layout_constraintEnd_toStartOf="@+id/tvCaptureVolume"
+                app:layout_constraintStart_toStartOf="@+id/tune_seek_volume"
+                app:layout_constraintTop_toTopOf="@+id/textView26"
+                tools:progress="50" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{paramMap[`sharpness`]}"
+                app:layout_constraintBottom_toBottomOf="@+id/textView26"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="0.0" />
+        </android.support.constraint.ConstraintLayout>
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="58dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_line_border_rectangle"
+            android:text="@string/cancel"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/white"
+            android:visibility="@{isSeeking?View.INVISIBLE:View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/relativeLayout"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+        <ImageButton
+            android:id="@+id/dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/transparent"
+            android:src="@mipmap/ic_done_no_circle"
+            android:visibility="@{isSeeking?View.INVISIBLE:View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

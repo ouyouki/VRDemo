@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/video_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.baidu.cloud.mediaproc.sample.ui.shortvideo.ShortVideoActivity">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:minHeight="48dp"
+                    app:layout_scrollFlags="enterAlwaysCollapsed"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="?selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:paddingEnd="14dp"
+                        android:paddingStart="14dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:onClick="onClickClose"
+                            android:src="@mipmap/ic_back" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="?selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:paddingEnd="14dp"
+                        android:paddingStart="14dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:onClick="showBottomSheet"
+                            android:src="@mipmap/ic_video_add" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:maxLines="1"
+                        android:text="短视频"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#44E2FE"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FF101010"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_video_list" />
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+            <LinearLayout
+                android:id="@+id/design_bottom_sheet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                app:behavior_hideable="true"
+                app:elevation="4dp"
+                app:layout_behavior="@string/bottom_sheet_behavior">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@drawable/background_enter_capture_button"
+                    android:onClick="onClickAddVideo"
+                    android:text="进入录制流程"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#007AFF" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/background_enter_select_button"
+                    android:onClick="onClickImport"
+                    android:text="从本地上传"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#007AFF" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_cancel_select"
+                    android:onClick="showBottomSheet"
+                    android:text="@string/cancel"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#007AFF" />
+            </LinearLayout>
+
+        </android.support.design.widget.CoordinatorLayout>
+    </FrameLayout>
+
+</layout>
+

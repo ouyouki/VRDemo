@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                   
+
+    
+
+                                           
+
+                                                           
+
+                 
+                           
+                                                        
+
+                 
+                              
+                                                         
+
+                 
+                                    
+                                                       
+
+                 
+                              
+                                                       
+
+                 
+                                 
+                                                                                          
+
+                 
+                                     
+                                                                                             
+
+                 
+                                      
+                                                                                            
+
+                 
+                            
+                                                           
+           
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="layout/dialog_base_tune_0"                                                 
+        android:orientation="vertical"
+        tools:background="#80000000"  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/base_setting"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white"
+            android:tag="binding_1"                                      
+            app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/dialog_background"
+            android:padding="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/dismiss"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView15">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="规格设置："
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?android:attr/textColorHintInverse"
+                android:tag="binding_2"                                      
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:layout_marginTop="15dp"
+                android:text="码率设置"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                android:tag="binding_3"                                      
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView1" />
+
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="6dp"
+                android:checkedButton="@+id/tune_rs_1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:tag="binding_4"                                      
+                app:layout_constraintBottom_toBottomOf="@id/textView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textView2"
+                app:layout_constraintTop_toTopOf="@id/textView2">
+
+                <RadioButton
+                    android:id="@+id/tune_rs_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:tag="binding_5"               
+                    android:text="360p"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_dialog_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/tune_rs_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:tag="binding_6"               
+                    android:text="480p"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_dialog_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/tune_rs_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:tag="binding_7"               
+                    android:text="720p"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_dialog_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/tune_rs_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:tag="binding_8"               
+                    android:text="1080p"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_dialog_radio_button" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/capture_time"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                android:tag="binding_9"                                      
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="6dp"
+                android:checkedButton="@+id/dialog_time_rb1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:tag="binding_10"                                     
+                app:layout_constraintBottom_toBottomOf="@id/textView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textView3"
+                app:layout_constraintTop_toTopOf="@id/textView3">
+
+                <RadioButton
+                    android:id="@+id/dialog_time_rb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:tag="binding_11"        
+                    android:text="15s"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_dialog_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/dialog_time_rb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:tag="binding_12"        
+                    android:text="30s"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_dialog_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/dialog_time_rb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:tag="binding_13"        
+                    android:text="45s"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_dialog_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/dialog_time_rb4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:tag="binding_14"        
+                    android:text="60s"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_dialog_radio_button" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:text="声音设置"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?android:attr/textColorHintInverse"
+                android:tag="binding_15"                                     
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView3" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/capture_volume"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                android:tag="binding_16"                                     
+                app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+            <SeekBar
+                android:id="@+id/tune_seek_volume"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:tag="binding_17"                     
+                                                           
+                                                                             
+                app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                app:layout_constraintEnd_toStartOf="@+id/tvCaptureVolume"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
+                app:layout_constraintTop_toTopOf="@+id/textView5"
+                tools:progress="100" />
+
+            <TextView
+                android:id="@+id/tvCaptureVolume"
+                style="@style/SettingTextStyle"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:tag="binding_18"            
+                android:textColor="@color/colorAccent"
+                                                                             
+                app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="100%" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView5"
+                android:layout_marginTop="27dp"
+                android:text="@string/setting_image"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?android:attr/textColorHintInverse"
+                android:tag="binding_19"                                     
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/setting_brightness"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView8" />
+
+            <SeekBar
+                android:id="@+id/tune_seek_brightness"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:tag="binding_20"                     
+                                                                    
+                                                                    
+                                                               
+                android:splitTrack="false"
+                app:layout_constraintBottom_toBottomOf="@+id/textView16"
+                app:layout_constraintEnd_toStartOf="@+id/tvCaptureVolume"
+                app:layout_constraintStart_toStartOf="@+id/tune_seek_volume"
+                app:layout_constraintTop_toTopOf="@+id/textView16"
+                tools:progress="50" />
+
+            <TextView
+                android:id="@+id/textView17"
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="binding_21"                
+                app:layout_constraintBottom_toBottomOf="@+id/textView16"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="0.0" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:text="@string/setting_contrast"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView16" />
+
+            <SeekBar
+                android:id="@+id/tune_seek_contrast"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:tag="binding_22"                     
+                                                                    
+                                                                    
+                                                             
+                android:splitTrack="false"
+                app:layout_constraintBottom_toBottomOf="@+id/textView19"
+                app:layout_constraintEnd_toStartOf="@+id/tvCaptureVolume"
+                app:layout_constraintStart_toStartOf="@+id/tune_seek_volume"
+                app:layout_constraintTop_toTopOf="@+id/textView19"
+                tools:progress="25" />
+
+            <TextView
+                android:id="@+id/textView25"
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="binding_23"              
+                app:layout_constraintBottom_toBottomOf="@id/textView19"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="1.0" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:text="@string/setting_saturation"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView19" />
+
+            <SeekBar
+                android:id="@+id/tune_seek_saturation"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:tag="binding_24"                     
+                                                                    
+                                                                    
+                                                               
+                android:splitTrack="false"
+                app:layout_constraintBottom_toBottomOf="@+id/textView21"
+                app:layout_constraintEnd_toStartOf="@+id/tvCaptureVolume"
+                app:layout_constraintStart_toStartOf="@+id/tune_seek_volume"
+                app:layout_constraintTop_toTopOf="@+id/textView21"
+                tools:progress="50" />
+
+            <TextView
+                android:id="@+id/textView24"
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="binding_25"                
+                app:layout_constraintBottom_toBottomOf="@id/textView21"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="1.0" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:text="@string/setting_hue"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView21" />
+
+            <SeekBar
+                android:id="@+id/tune_seek_hue"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:tag="binding_26"                     
+                                                                    
+                                                                    
+                                                        
+                android:splitTrack="false"
+                app:layout_constraintBottom_toBottomOf="@+id/textView23"
+                app:layout_constraintEnd_toStartOf="@+id/tvCaptureVolume"
+                app:layout_constraintStart_toStartOf="@+id/tune_seek_volume"
+                app:layout_constraintTop_toTopOf="@+id/textView23"
+                tools:progress="50" />
+
+            <TextView
+                android:id="@+id/textView22"
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="binding_27"         
+                app:layout_constraintBottom_toBottomOf="@+id/textView23"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="0.0" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:text="@string/setting_sharpness"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView23" />
+
+            <SeekBar
+                android:id="@+id/tune_seek_sharpness"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:tag="binding_28"                     
+                                                                    
+                                                                    
+                                                              
+                android:splitTrack="false"
+                app:layout_constraintBottom_toBottomOf="@+id/textView26"
+                app:layout_constraintEnd_toStartOf="@+id/tvCaptureVolume"
+                app:layout_constraintStart_toStartOf="@+id/tune_seek_volume"
+                app:layout_constraintTop_toTopOf="@+id/textView26"
+                tools:progress="50" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="binding_29"               
+                app:layout_constraintBottom_toBottomOf="@+id/textView26"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="0.0" />
+        </android.support.constraint.ConstraintLayout>
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="58dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_line_border_rectangle"
+            android:text="@string/cancel"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/white"
+            android:tag="binding_30"                                     
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/relativeLayout"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+        <ImageButton
+            android:id="@+id/dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/transparent"
+            android:src="@mipmap/ic_done_no_circle"
+            android:tag="binding_31"                                     
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+    </android.support.constraint.ConstraintLayout>
+
+         

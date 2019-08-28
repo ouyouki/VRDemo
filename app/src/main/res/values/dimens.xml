@@ -1,0 +1,16 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">20dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="music_list_spacing">8dp</dimen>
+    <dimen name="remote_preview_margin_calling">8dp</dimen>
+    <dimen name="remote_preview_margin">0dp</dimen>
+
+    <dimen name="controller_padding_start_fullscreen">12dp</dimen>
+    <dimen name="controller_padding_start_normal">0dp</dimen>
+    <dimen name="controller_time_margin_fullscreen">16dp</dimen>
+    <dimen name="controller_time_margin_normal">12dp</dimen>
+
+    <dimen name="preview_margin_top_normal">24dp</dimen>
+    <dimen name="preview_margin_top_none">0dp</dimen>
+</resources>

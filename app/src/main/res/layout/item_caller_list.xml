@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="56dp"
+    android:layout_height="70dp">
+
+    <TextView
+        android:id="@+id/text_guest_name"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_oval_blue"
+        android:gravity="center"
+        android:typeface="monospace"
+        android:text="A"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse" />
+
+    <View
+        android:id="@+id/item_filter_edge"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:background="@drawable/item_filter_chosed_circle"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
+</FrameLayout>

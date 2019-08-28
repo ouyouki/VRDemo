@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.baidu.cloud.mediaproc.sample.ui.lss.viewmodel.StreamViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="132dp"
+        android:layout_height="56dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:background="@drawable/background_call_control"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:text="@{model.mConversationTime}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="00:21" />
+
+        <Button
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="5dp"
+            android:background="@mipmap/ic_call_end"
+            android:onClick="@{model::onClickEndCall}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+            android:visibility="@{model.timeShowing?View.VISIBLE:View.INVISIBLE}"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

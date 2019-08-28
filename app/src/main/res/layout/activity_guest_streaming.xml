@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.baidu.cloud.mediaproc.sample.ui.lss.viewmodel.GuestStreamViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.lss.StreamingActivity">
+
+        <SurfaceView
+            android:id="@+id/local_preview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="132dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="42dp"
+            android:visibility="@{model.timeShowing?View.VISIBLE:View.INVISIBLE}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:background="@drawable/background_call_control"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:text="@{model.mConversationTime}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="00:21" />
+
+            <Button
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="5dp"
+                android:background="@mipmap/ic_call_end"
+                android:onClick="onClickCall"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+                android:visibility="@{model.timeShowing?View.VISIBLE:View.INVISIBLE}"
+                app:layout_constraintStart_toStartOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/black"
+            android:visibility="@{model.calling ? View.INVISIBLE : View.VISIBLE }"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.baidu.cloud.mediaproc.sample.widget.video.BDCloudVideoView
+                android:id="@+id/remote_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </FrameLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="88dp"
+            android:layout_height="130dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="10dp"
+            android:visibility="@{model.timeShowing?View.VISIBLE:View.INVISIBLE}"
+            app:layout_constraintBottom_toTopOf="@+id/textView10"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <com.baidu.cloud.mediaproc.sample.widget.video.BDCloudVideoView
+                android:id="@+id/remote_preview1"
+                android:layout_width="88dp"
+                android:layout_height="130dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:background="#66000000"
+                app:layout_constraintBottom_toBottomOf="@id/remote_preview1"
+                app:layout_constraintEnd_toEndOf="@id/remote_preview1"
+                app:layout_constraintStart_toStartOf="@id/remote_preview1" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/shape_oval_blue"
+                android:gravity="center"
+                android:text="@{model.mRoomNameFirstChar}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@android:color/white"
+                android:typeface="monospace"
+                app:layout_constraintBottom_toBottomOf="@id/remote_preview1"
+                app:layout_constraintStart_toStartOf="@id/remote_preview1"
+                tools:text="A" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="主播"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                app:layout_constraintBottom_toBottomOf="@+id/view3"
+                app:layout_constraintLeft_toRightOf="@+id/textView18"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+        </android.support.constraint.ConstraintLayout>
+
+
+        <RelativeLayout
+            android:layout_width="206dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="34dp"
+            android:background="@drawable/dialog_background"
+            android:visibility="@{model.waiting ? View.VISIBLE : View.INVISIBLE }"
+            app:elevation="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="#777"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/text_host_name"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_oval_blue"
+                android:gravity="center"
+                android:text="@{model.mRoomNameFirstChar}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+                android:typeface="monospace"
+                tools:text="G" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_toEndOf="@+id/text_host_name"
+                android:gravity="center"
+                android:text="@string/calling_des"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="14dp"
+                android:layout_toEndOf="@+id/text_host_name"
+                android:gravity="center"
+                android:text="20s自动挂断"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="?android:attr/textColorTertiaryInverse" />
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:background="@mipmap/ic_close_stream"
+            android:onClick="onClickClose"
+            app:layout_constraintBottom_toTopOf="@+id/textView10"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:background="@drawable/background_call_button"
+            android:onClick="onClickCall"
+            android:text="@string/request_call"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="@android:color/white"
+            android:visibility="@{model.calling?View.INVISIBLE:View.VISIBLE}"
+            app:layout_constraintBottom_toTopOf="@+id/textView10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/local_preview"
+            app:layout_constraintVertical_bias="0.9" />
+
+        <Button
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@mipmap/ic_call_end"
+            android:onClick="onClickCall"
+            android:visibility="@{model.waiting?View.VISIBLE:View.INVISIBLE}"
+            app:layout_constraintBottom_toTopOf="@+id/textView10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/local_preview"
+            app:layout_constraintVertical_bias="0.9" />
+
+        <TextView
+            android:id="@+id/textView10"
+            style="@style/Widget.TextView.LssTint"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="@{model.calling?@string/guest_tint_calling:@string/guest_tint}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="您是观众" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

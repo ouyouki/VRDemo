@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.baidu.cloud.mediaproc.sample.ui.lss.viewmodel.StreamViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_calling_view_gradient"
+        android:visibility="@{model.requesting?View.VISIBLE:View.INVISIBLE}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#66000000"
+            app:layout_constraintBottom_toBottomOf="@+id/caller_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/caller_list" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="44dp"
+            android:text="连麦序列"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:textColor="?android:attr/textColorTertiaryInverse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/caller_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            app:layout_constraintStart_toEndOf="@id/textView11"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_caller_list" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="190dp"
+            android:layout_height="136dp"
+            android:background="@mipmap/user_avatar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/caller_list"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <TextView
+            android:id="@+id/text_guest_name"
+            android:layout_width="103dp"
+            android:layout_height="103dp"
+            android:background="@drawable/shape_oval_blue"
+            android:gravity="center"
+            android:text="@{model.currentChosenCaller}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintLeft_toLeftOf="@+id/view"
+            app:layout_constraintRight_toRightOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            tools:text="C" />
+
+        <TextView
+            android:id="@+id/text_guest_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="39dp"
+            android:gravity="center"
+            android:text="@{model.currentChosenCallerID}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            tools:text="连麦者ID" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="请求与你连麦，是否接通？"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_guest_id" />
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@mipmap/ic_call"
+            android:onClick="@{model::onClickAccept}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/button2"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@mipmap/ic_call_end"
+            android:onClick="@{model::onClickRefuse}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/button"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

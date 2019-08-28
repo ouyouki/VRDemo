@@ -1,0 +1,347 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:2:1-94:12
+INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:2:1-94:12
+INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:2:1-94:12
+INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:2:1-94:12
+MERGED from [com.android.databinding:adapters:3.2.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\adapters-3.2.0.aar\86451bf7f72c21df727f9ed37ad7cfa0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.databinding:library:3.2.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\library-3.2.0.aar\c51e5f68c71a009242a043396b654f6c\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:design:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\0b85fd207b90164cb72389ef9d9daa6f\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\22c5d19a6721d680dfa97a0e194ce7f0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\91c3779ed7f6d5d84321baa48a02191b\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\98f013f9b4d70933629553a312c16b09\AndroidManifest.xml:2:1-11:12
+MERGED from [com.tbruyelle.rxpermissions2:rxpermissions:0.9.4] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\rxpermissions-0.9.4.aar\251df6563adddbfec1a671b8c0d2affa\AndroidManifest.xml:2:1-13:12
+MERGED from [com.jakewharton.rxbinding2:rxbinding-support-v4:2.0.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\rxbinding-support-v4-2.0.0.aar\d2e1930c930b6c1c5462d257bc3c9203\AndroidManifest.xml:2:1-8:12
+MERGED from [com.jakewharton.rxbinding2:rxbinding:2.0.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\rxbinding-2.0.0.aar\55890e09273e03e8f4a3f98a5aa5b456\AndroidManifest.xml:2:1-8:12
+MERGED from [com.trello.rxlifecycle2:rxlifecycle-android:2.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\rxlifecycle-android-2.1.0.aar\a3bbda1fa1b9e1088ca5acd62a4133d9\AndroidManifest.xml:13:1-19:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\5a8c84f2ec7d6b5825d8840d5fe06e41\AndroidManifest.xml:15:1-21:12
+MERGED from [com.android.support:transition:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\97faf544ace0a271da59ccd0f26cd267\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\ddb40aaf2499f3485e900df585be37e3\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\d94e0e971be0f14176d389aec2139ee2\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\70f62248cc862e44936024ef59636a2c\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\de55b420c171b92f8f425e4a2543f673\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\18d7fc220edbe026f49a899ee7a5cdef\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\77abddef8dd6469b09cc0ffaafb77d0f\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ce701c134bdefa1f37c925b571a9b4e8\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\5d7d1c9577323fd4829286ce48d70ad4\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\6c1e7b1a7a9a3be26a3cdcd9dfb3e781\AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\61c28f478305a6ec3bb5fe7133201b32\AndroidManifest.xml:17:1-24:12
+INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:2:1-94:12
+INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:2:1-94:12
+INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:2:1-94:12
+	package
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:3:5-47
+		INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml
+		INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:2:1-94:12
+		INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:2:1-94:12
+		INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:2:11-69
+uses-feature#android.hardware.camera
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:7:5-60
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:7:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:8:5-9:36
+	android:required
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:9:9-33
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:8:19-67
+uses-permission#android.permission.CAMERA
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:10:5-65
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:10:22-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:11:5-71
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:11:22-68
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:12:5-80
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:12:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:13:5-81
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:13:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:14:5-80
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:14:22-77
+uses-permission#android.permission.INTERNET
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:15:5-67
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:15:22-64
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:16:5-75
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:16:22-72
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:17:5-79
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:17:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:18:5-76
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:18:22-73
+uses-permission#android.permission.WAKE_LOCK
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:19:5-68
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:19:22-65
+application
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:23:5-92:19
+MERGED from [com.android.support:design:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\0b85fd207b90164cb72389ef9d9daa6f\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\0b85fd207b90164cb72389ef9d9daa6f\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\22c5d19a6721d680dfa97a0e194ce7f0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\22c5d19a6721d680dfa97a0e194ce7f0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\91c3779ed7f6d5d84321baa48a02191b\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\91c3779ed7f6d5d84321baa48a02191b\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\98f013f9b4d70933629553a312c16b09\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\98f013f9b4d70933629553a312c16b09\AndroidManifest.xml:9:5-20
+MERGED from [com.tbruyelle.rxpermissions2:rxpermissions:0.9.4] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\rxpermissions-0.9.4.aar\251df6563adddbfec1a671b8c0d2affa\AndroidManifest.xml:11:5-20
+MERGED from [com.tbruyelle.rxpermissions2:rxpermissions:0.9.4] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\rxpermissions-0.9.4.aar\251df6563adddbfec1a671b8c0d2affa\AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:transition:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\97faf544ace0a271da59ccd0f26cd267\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\97faf544ace0a271da59ccd0f26cd267\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\ddb40aaf2499f3485e900df585be37e3\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\ddb40aaf2499f3485e900df585be37e3\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\d94e0e971be0f14176d389aec2139ee2\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\d94e0e971be0f14176d389aec2139ee2\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\70f62248cc862e44936024ef59636a2c\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\70f62248cc862e44936024ef59636a2c\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\de55b420c171b92f8f425e4a2543f673\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\de55b420c171b92f8f425e4a2543f673\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\18d7fc220edbe026f49a899ee7a5cdef\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\18d7fc220edbe026f49a899ee7a5cdef\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\77abddef8dd6469b09cc0ffaafb77d0f\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\77abddef8dd6469b09cc0ffaafb77d0f\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ce701c134bdefa1f37c925b571a9b4e8\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ce701c134bdefa1f37c925b571a9b4e8\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\5d7d1c9577323fd4829286ce48d70ad4\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\5d7d1c9577323fd4829286ce48d70ad4\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\6c1e7b1a7a9a3be26a3cdcd9dfb3e781\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\6c1e7b1a7a9a3be26a3cdcd9dfb3e781\AndroidManifest.xml:25:5-29:19
+	android:supportsRtl
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:27:9-35
+	android:label
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:26:9-41
+	android:icon
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:25:9-43
+	android:allowBackup
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:24:9-35
+	android:theme
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:28:9-40
+activity#cn.geosite.ar.LiveRoomActivity
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:30:9-39:20
+	android:label
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:33:13-61
+	android:windowSoftInputMode
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:34:13-52
+	android:configChanges
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:32:13-74
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:31:13-58
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:35:13-38:29
+action#android.intent.action.MAIN
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:36:17-69
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:36:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:37:17-77
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:37:27-74
+activity#com.baidu.cloud.mediaproc.sample.ui.shortvideo.ConcatActivity
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:40:9-42:52
+	android:screenOrientation
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:42:13-49
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:41:13-57
+activity#com.baidu.cloud.mediaproc.sample.ui.shortvideo.ShortVideoActivity
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:43:9-48:52
+	android:screenOrientation
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:48:13-49
+	android:launchMode
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:47:13-44
+	android:hardwareAccelerated
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:46:13-47
+	android:configChanges
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:45:13-74
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:44:13-61
+activity#com.baidu.cloud.mediaproc.sample.ui.lss.StreamingActivity
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:49:9-53:53
+	android:screenOrientation
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:53:13-50
+	android:label
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:52:13-61
+	android:configChanges
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:51:13-74
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:50:13-53
+activity#com.baidu.cloud.mediaproc.sample.ui.lss.GuestStreamingActivity
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:54:9-58:52
+	android:screenOrientation
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:58:13-49
+	android:label
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:57:13-61
+	android:configChanges
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:56:13-74
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:55:13-58
+service#com.baidu.cloud.mediaproc.sample.ui.lss.ScreenStreamingService
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:60:9-66
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:60:18-63
+activity#com.baidu.cloud.mediaproc.sample.ui.shortvideo.PreviewActivity
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:62:9-64:52
+	android:screenOrientation
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:64:13-49
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:63:13-58
+activity#com.baidu.cloud.mediaproc.sample.ui.shortvideo.CaptureActivity
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:65:9-68:52
+	android:screenOrientation
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:68:13-49
+	android:launchMode
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:67:13-44
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:66:13-58
+activity#com.baidu.cloud.mediaproc.sample.ui.shortvideo.ConfigProcessActivity
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:69:9-71:52
+	android:screenOrientation
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:71:13-49
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:70:13-64
+activity#com.baidu.cloud.mediaproc.sample.ui.shortvideo.ProcessActivity
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:72:9-74:52
+	android:screenOrientation
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:74:13-49
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:73:13-58
+activity#com.baidu.cloud.mediaproc.sample.ui.contest.ContestEntranceActivity
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:76:9-80:55
+	android:label
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:79:13-39
+	android:windowSoftInputMode
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:80:13-52
+	android:configChanges
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:78:13-74
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:77:13-63
+activity#com.baidu.cloud.mediaproc.sample.ui.contest.ContestSplashActivity
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:81:9-86:55
+	android:label
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:84:13-39
+	android:launchMode
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:85:13-44
+	android:windowSoftInputMode
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:86:13-52
+	android:configChanges
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:83:13-74
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:82:13-61
+activity#com.baidu.cloud.mediaproc.sample.ui.contest.ContestActivity
+ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:87:9-91:55
+	android:label
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:90:13-37
+	android:windowSoftInputMode
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:91:13-52
+	android:configChanges
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:89:13-74
+	android:name
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml:88:13-55
+uses-sdk
+INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml
+INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml
+MERGED from [com.android.databinding:adapters:3.2.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\adapters-3.2.0.aar\86451bf7f72c21df727f9ed37ad7cfa0\AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:adapters:3.2.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\adapters-3.2.0.aar\86451bf7f72c21df727f9ed37ad7cfa0\AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.2.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\library-3.2.0.aar\c51e5f68c71a009242a043396b654f6c\AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.2.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\library-3.2.0.aar\c51e5f68c71a009242a043396b654f6c\AndroidManifest.xml:22:5-44
+MERGED from [com.android.support:design:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\0b85fd207b90164cb72389ef9d9daa6f\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\0b85fd207b90164cb72389ef9d9daa6f\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\22c5d19a6721d680dfa97a0e194ce7f0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\22c5d19a6721d680dfa97a0e194ce7f0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\91c3779ed7f6d5d84321baa48a02191b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\91c3779ed7f6d5d84321baa48a02191b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\98f013f9b4d70933629553a312c16b09\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\98f013f9b4d70933629553a312c16b09\AndroidManifest.xml:5:5-7:41
+MERGED from [com.tbruyelle.rxpermissions2:rxpermissions:0.9.4] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\rxpermissions-0.9.4.aar\251df6563adddbfec1a671b8c0d2affa\AndroidManifest.xml:7:5-9:41
+MERGED from [com.tbruyelle.rxpermissions2:rxpermissions:0.9.4] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\rxpermissions-0.9.4.aar\251df6563adddbfec1a671b8c0d2affa\AndroidManifest.xml:7:5-9:41
+MERGED from [com.jakewharton.rxbinding2:rxbinding-support-v4:2.0.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\rxbinding-support-v4-2.0.0.aar\d2e1930c930b6c1c5462d257bc3c9203\AndroidManifest.xml:6:5-44
+MERGED from [com.jakewharton.rxbinding2:rxbinding-support-v4:2.0.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\rxbinding-support-v4-2.0.0.aar\d2e1930c930b6c1c5462d257bc3c9203\AndroidManifest.xml:6:5-44
+MERGED from [com.jakewharton.rxbinding2:rxbinding:2.0.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\rxbinding-2.0.0.aar\55890e09273e03e8f4a3f98a5aa5b456\AndroidManifest.xml:6:5-44
+MERGED from [com.jakewharton.rxbinding2:rxbinding:2.0.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\rxbinding-2.0.0.aar\55890e09273e03e8f4a3f98a5aa5b456\AndroidManifest.xml:6:5-44
+MERGED from [com.trello.rxlifecycle2:rxlifecycle-android:2.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\rxlifecycle-android-2.1.0.aar\a3bbda1fa1b9e1088ca5acd62a4133d9\AndroidManifest.xml:17:5-44
+MERGED from [com.trello.rxlifecycle2:rxlifecycle-android:2.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\rxlifecycle-android-2.1.0.aar\a3bbda1fa1b9e1088ca5acd62a4133d9\AndroidManifest.xml:17:5-44
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\5a8c84f2ec7d6b5825d8840d5fe06e41\AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\5a8c84f2ec7d6b5825d8840d5fe06e41\AndroidManifest.xml:19:5-43
+MERGED from [com.android.support:transition:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\97faf544ace0a271da59ccd0f26cd267\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\97faf544ace0a271da59ccd0f26cd267\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\ddb40aaf2499f3485e900df585be37e3\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\ddb40aaf2499f3485e900df585be37e3\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\d94e0e971be0f14176d389aec2139ee2\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\d94e0e971be0f14176d389aec2139ee2\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\70f62248cc862e44936024ef59636a2c\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\70f62248cc862e44936024ef59636a2c\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\de55b420c171b92f8f425e4a2543f673\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\de55b420c171b92f8f425e4a2543f673\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\18d7fc220edbe026f49a899ee7a5cdef\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\18d7fc220edbe026f49a899ee7a5cdef\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\77abddef8dd6469b09cc0ffaafb77d0f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\77abddef8dd6469b09cc0ffaafb77d0f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ce701c134bdefa1f37c925b571a9b4e8\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ce701c134bdefa1f37c925b571a9b4e8\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\5d7d1c9577323fd4829286ce48d70ad4\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\5d7d1c9577323fd4829286ce48d70ad4\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\6c1e7b1a7a9a3be26a3cdcd9dfb3e781\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\6c1e7b1a7a9a3be26a3cdcd9dfb3e781\AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\61c28f478305a6ec3bb5fe7133201b32\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\61c28f478305a6ec3bb5fe7133201b32\AndroidManifest.xml:20:5-22:41
+INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml
+INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\0b85fd207b90164cb72389ef9d9daa6f\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml
+		INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml
+		ADDED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml
+		INJECTED from D:\workspace\android\AndroidStudioProjects\VRDemo\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\0b85fd207b90164cb72389ef9d9daa6f\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\22c5d19a6721d680dfa97a0e194ce7f0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\22c5d19a6721d680dfa97a0e194ce7f0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\91c3779ed7f6d5d84321baa48a02191b\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\91c3779ed7f6d5d84321baa48a02191b\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\97faf544ace0a271da59ccd0f26cd267\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\97faf544ace0a271da59ccd0f26cd267\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\ddb40aaf2499f3485e900df585be37e3\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\ddb40aaf2499f3485e900df585be37e3\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\d94e0e971be0f14176d389aec2139ee2\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\d94e0e971be0f14176d389aec2139ee2\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\70f62248cc862e44936024ef59636a2c\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\70f62248cc862e44936024ef59636a2c\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\de55b420c171b92f8f425e4a2543f673\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\de55b420c171b92f8f425e4a2543f673\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\18d7fc220edbe026f49a899ee7a5cdef\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\18d7fc220edbe026f49a899ee7a5cdef\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\77abddef8dd6469b09cc0ffaafb77d0f\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\77abddef8dd6469b09cc0ffaafb77d0f\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ce701c134bdefa1f37c925b571a9b4e8\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ce701c134bdefa1f37c925b571a9b4e8\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\5d7d1c9577323fd4829286ce48d70ad4\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\5d7d1c9577323fd4829286ce48d70ad4\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\6c1e7b1a7a9a3be26a3cdcd9dfb3e781\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\6c1e7b1a7a9a3be26a3cdcd9dfb3e781\AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:design:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\0b85fd207b90164cb72389ef9d9daa6f\AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:design:26.1.0] C:\Users\ouyouki\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\0b85fd207b90164cb72389ef9d9daa6f\AndroidManifest.xml:27:13-51

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.databinding.ObservableMap" />
+
+        <variable
+            name="paramMap"
+            type="ObservableMap&lt;String,String&gt;" />
+
+        <variable
+            name="progressMap"
+            type="ObservableMap&lt;String,Integer&gt;" />
+
+        <variable
+            name="onParamsChange"
+            type="android.databinding.adapters.SeekBarBindingAdapter.OnProgressChanged" />
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="281dp"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="0dp"
+            android:layout_height="?actionBarSize"
+            android:padding="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/setting_image"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse" />
+
+            <LinearLayout
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingEnd="24dp"
+                android:paddingStart="24dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/ic_cancel_small" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dismiss"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingEnd="24dp"
+                android:paddingStart="24dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/ic_confirm_small" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="#5C6066"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout1" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@string/setting_brightness"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            app:layout_constraintBottom_toTopOf="@id/textView19"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/relativeLayout1" />
+
+        <SeekBar
+            android:id="@+id/tune_seek_brightness"
+            style="@style/Widget.AppCompat.SeekBar.Dialog"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onProgressChanged="@{onParamsChange}"
+            android:progress="@{progressMap[`brightness`]}"
+            android:splitTrack="false"
+            app:layout_constraintBottom_toBottomOf="@+id/textView16"
+            app:layout_constraintEnd_toStartOf="@+id/textView17"
+            app:layout_constraintStart_toStartOf="@+id/tune_seek_contrast"
+            app:layout_constraintTop_toTopOf="@+id/textView16"
+            tools:progress="50" />
+
+        <TextView
+            android:id="@+id/textView17"
+            style="@style/SettingTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="@{paramMap[`brightness`]}"
+            app:layout_constraintBottom_toBottomOf="@+id/textView16"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="0.0" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@string/setting_contrast"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            app:layout_constraintBottom_toTopOf="@id/textView21"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView16" />
+
+        <SeekBar
+            android:id="@+id/tune_seek_contrast"
+            style="@style/Widget.AppCompat.SeekBar.Dialog"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onProgressChanged="@{onParamsChange}"
+            android:progress="@{progressMap[`contrast`]}"
+            android:splitTrack="false"
+            app:layout_constraintBottom_toBottomOf="@+id/textView19"
+            app:layout_constraintEnd_toStartOf="@+id/textView25"
+            app:layout_constraintStart_toEndOf="@+id/textView19"
+            app:layout_constraintTop_toTopOf="@+id/textView19"
+            tools:progress="25" />
+
+        <TextView
+            android:id="@+id/textView25"
+            style="@style/SettingTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="@{paramMap[`contrast`]}"
+            app:layout_constraintBottom_toBottomOf="@id/textView19"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="1.0" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@string/setting_saturation"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            app:layout_constraintBottom_toTopOf="@+id/textView23"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView19" />
+
+        <SeekBar
+            android:id="@+id/tune_seek_saturation"
+            style="@style/Widget.AppCompat.SeekBar.Dialog"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onProgressChanged="@{onParamsChange}"
+            android:progress="@{progressMap[`saturation`]}"
+            android:splitTrack="false"
+            app:layout_constraintBottom_toBottomOf="@+id/textView21"
+            app:layout_constraintEnd_toStartOf="@+id/textView24"
+            app:layout_constraintStart_toEndOf="@+id/textView21"
+            app:layout_constraintTop_toTopOf="@+id/textView21"
+            tools:progress="50" />
+
+        <TextView
+            android:id="@+id/textView24"
+            style="@style/SettingTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="@{paramMap[`saturation`]}"
+            app:layout_constraintBottom_toBottomOf="@id/textView21"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="1.0" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@string/setting_hue"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            app:layout_constraintBottom_toTopOf="@+id/textView26"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView21" />
+
+        <SeekBar
+            android:id="@+id/tune_seek_hue"
+            style="@style/Widget.AppCompat.SeekBar.Dialog"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onProgressChanged="@{onParamsChange}"
+            android:progress="@{progressMap[`hue`]}"
+            android:splitTrack="false"
+            app:layout_constraintBottom_toBottomOf="@+id/textView23"
+            app:layout_constraintEnd_toStartOf="@+id/textView22"
+            app:layout_constraintStart_toStartOf="@+id/tune_seek_contrast"
+            app:layout_constraintTop_toTopOf="@+id/textView23"
+            tools:progress="50" />
+
+        <TextView
+            android:id="@+id/textView22"
+            style="@style/SettingTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="@{paramMap[`hue`]}"
+            app:layout_constraintBottom_toBottomOf="@+id/textView23"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="0.0" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@string/setting_sharpness"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView23" />
+
+        <SeekBar
+            android:id="@+id/tune_seek_sharpness"
+            style="@style/Widget.AppCompat.SeekBar.Dialog"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onProgressChanged="@{onParamsChange}"
+            android:progress="@{progressMap[`sharpness`]}"
+            android:splitTrack="false"
+            app:layout_constraintBottom_toBottomOf="@+id/textView26"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/tune_seek_contrast"
+            app:layout_constraintTop_toTopOf="@+id/textView26"
+            tools:progress="50" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/SettingTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="@{paramMap[`sharpness`]}"
+            app:layout_constraintBottom_toBottomOf="@+id/textView26"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="0.0" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

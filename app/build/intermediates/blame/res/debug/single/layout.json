@@ -1,0 +1,110 @@
+[
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_music_choose_process.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\layout_music_choose_process.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_streaming.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\activity_streaming.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_config_process.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\activity_config_process.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_music_tune.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\layout_music_tune.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_capture.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\activity_capture.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_base_tune.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\dialog_base_tune.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_beauty_face.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\dialog_beauty_face.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_music_choose.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\layout_music_choose.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_coming_call.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\layout_coming_call.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_contest_entrance.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\activity_contest_entrance.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_shortvideo.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\activity_shortvideo.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_base_tune_process.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\dialog_base_tune_process.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_music_tune_process.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\layout_music_tune_process.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_preview.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\activity_preview.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_video_list.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\item_video_list.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_custom_filter.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\dialog_custom_filter.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_filter_process.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\layout_filter_process.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_music_list.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\item_music_list.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_video_panel.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\layout_video_panel.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_music.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\layout_music.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_guest_streaming.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\activity_guest_streaming.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_live_room.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\activity_live_room.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_contest.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\activity_contest.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_contest_splash.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\activity_contest_splash.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_call_control.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\layout_call_control.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_beauty_face_process.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\dialog_beauty_face_process.xml"
+    },
+    {
+        "merged": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_process.xml",
+        "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\layout\\activity_process.xml"
+    }
+]

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="com.baidu.cloud.mediaproc.sample.ui.shortvideo.viewmodel.VideoListViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.baidu.cloud.mediaproc.sample.ui.shortvideo.ShortVideoActivity">
+
+        <FrameLayout
+            android:id="@+id/item_video_holder"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/black"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/item_video_preview_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="@{model.dirty?View.GONE:View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="@id/item_video_holder"
+            app:layout_constraintEnd_toEndOf="@id/item_video_holder"
+            app:layout_constraintStart_toStartOf="@id/item_video_holder"
+            app:layout_constraintTop_toTopOf="@id/item_video_holder"
+            tools:src="@mipmap/background_lss" />
+
+        <ImageButton
+            android:id="@+id/item_video_load"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_play"
+            android:visibility="@{model.dirty?View.GONE:View.VISIBLE}"
+            app:layout_constraintBottom_toTopOf="@+id/item_video_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="12dp"
+            android:text="@{model.description}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+            android:visibility="@{model.dirty?View.INVISIBLE:View.VISIBLE}"
+            app:layout_constraintBottom_toTopOf="@+id/item_video_info"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Trump 现场教学，推特怒怼地球人"
+            tools:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/item_video_info"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_video_holder">
+
+            <ImageView
+                android:id="@+id/item_video_avatar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                tools:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/item_video_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/item_video_avatar"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                tools:text="推特治国" />
+
+            <ImageView
+                android:id="@+id/item_video_star"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/item_video_likes"
+                android:onClick="@{model::onClickStar}"
+                android:src="@{model.like?@drawable/ic_star_fill_small:@drawable/ic_star_small}"
+                tools:src="@drawable/ic_star_fill_small" />
+
+            <TextView
+                android:id="@+id/item_video_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                tools:text="39K" />
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

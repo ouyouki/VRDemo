@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.databinding.ObservableMap" />
+
+        <variable
+            name="paramMap"
+            type="ObservableMap&lt;String,Integer&gt;" />
+
+        <variable
+            name="onParamsChange"
+            type="android.databinding.adapters.SeekBarBindingAdapter.OnProgressChanged" />
+
+        <variable
+            name="startTrackingTouch"
+            type="android.databinding.adapters.SeekBarBindingAdapter.OnStartTrackingTouch" />
+
+        <variable
+            name="onStopTrackingTouch"
+            type="android.databinding.adapters.SeekBarBindingAdapter.OnStopTrackingTouch" />
+
+        <variable
+            name="isSeeking"
+            type="android.databinding.ObservableBoolean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="193dp"
+        android:background="@{isSeeking?@drawable/transparent:@drawable/black_mask_translucent}"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingEnd="24dp"
+        android:paddingStart="24dp"
+        tools:background="@drawable/black_mask_translucent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/beauty_param_skin"
+                android:textColor="@android:color/white" />
+
+            <SeekBar
+                android:id="@+id/beauty_seek_smooth"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="27dp"
+                android:layout_marginStart="27dp"
+                android:layout_weight="1"
+                android:onProgressChanged="@{onParamsChange}"
+                android:onStartTrackingTouch="@{startTrackingTouch}"
+                android:onStopTrackingTouch="@{onStopTrackingTouch}"
+                android:progress="@{paramMap[`smooth`]}"
+                android:splitTrack="false" />
+
+            <TextView
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/percentFormat(paramMap[`smooth`])}"
+                tools:text="0%" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/beauty_param_white"
+                android:textColor="@android:color/white" />
+
+            <SeekBar
+                android:id="@+id/beauty_seek_bright"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="27dp"
+                android:layout_marginStart="27dp"
+                android:layout_weight="1"
+                android:onProgressChanged="@{onParamsChange}"
+                android:onStartTrackingTouch="@{startTrackingTouch}"
+                android:onStopTrackingTouch="@{onStopTrackingTouch}"
+                android:progress="@{paramMap[`bright`]}"
+                android:splitTrack="false" />
+
+            <TextView
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/percentFormat(paramMap[`bright`])}"
+                tools:text="0%" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/beauty_param_pink"
+                android:textColor="@android:color/white" />
+
+            <SeekBar
+                android:id="@+id/beauty_seek_pink"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="27dp"
+                android:layout_marginStart="27dp"
+                android:layout_weight="1"
+                android:onProgressChanged="@{onParamsChange}"
+                android:onStartTrackingTouch="@{startTrackingTouch}"
+                android:onStopTrackingTouch="@{onStopTrackingTouch}"
+                android:progress="@{paramMap[`pink`]}"
+                android:splitTrack="false" />
+
+            <TextView
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/percentFormat(paramMap[`pink`])}"
+                tools:text="0%" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

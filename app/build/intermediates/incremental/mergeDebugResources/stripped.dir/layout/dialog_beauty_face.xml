@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                   
+
+    
+
+                                           
+
+                                                           
+
+                 
+                           
+                                                         
+
+                 
+                                 
+                                                                                          
+
+                 
+                                     
+                                                                                             
+
+                 
+                                      
+                                                                                            
+
+                 
+                            
+                                                           
+           
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="193dp"
+        android:tag="layout/dialog_beauty_face_0"                                               
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingEnd="24dp"
+        android:paddingStart="24dp"
+        tools:background="@drawable/black_mask_translucent"  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/beauty_param_skin"
+                android:textColor="@android:color/white" />
+
+            <SeekBar
+                android:id="@+id/beauty_seek_smooth"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="27dp"
+                android:layout_marginStart="27dp"
+                android:layout_weight="1"
+                android:tag="binding_1"                      
+                                                                    
+                                                                    
+                                                        
+                android:splitTrack="false" />
+
+            <TextView
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="binding_2"                                    
+                tools:text="0%" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/beauty_param_white"
+                android:textColor="@android:color/white" />
+
+            <SeekBar
+                android:id="@+id/beauty_seek_bright"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="27dp"
+                android:layout_marginStart="27dp"
+                android:layout_weight="1"
+                android:tag="binding_3"                      
+                                                                    
+                                                                    
+                                                        
+                android:splitTrack="false" />
+
+            <TextView
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="binding_4"                                    
+                tools:text="0%" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/beauty_param_pink"
+                android:textColor="@android:color/white" />
+
+            <SeekBar
+                android:id="@+id/beauty_seek_pink"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="27dp"
+                android:layout_marginStart="27dp"
+                android:layout_weight="1"
+                android:tag="binding_5"                      
+                                                                    
+                                                                    
+                                                      
+                android:splitTrack="false" />
+
+            <TextView
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="binding_6"                                  
+                tools:text="0%" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+         

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="com.baidu.cloud.mediaproc.sample.ui.shortvideo.viewmodel.PreviewViewModel" />
+
+    </data>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/activity_config_process"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        tools:context="com.baidu.cloud.mediaproc.sample.ui.shortvideo.PreviewActivity">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:onClick="onClickTopLeft"
+                android:orientation="horizontal"
+                android:paddingEnd="14dp"
+                android:paddingStart="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/ic_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="返回"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:onClick="@{model::onClickTopRight}"
+                android:orientation="horizontal"
+                android:paddingEnd="14dp"
+                android:paddingStart="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:text="完成"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@android:color/white" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/ic_confirm_small" />
+
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+            <SurfaceView
+                android:id="@+id/surfaceView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:visibility="@{model.isPreviewStarted?View.INVISIBLE:View.VISIBLE}"
+                tools:src="@drawable/baidu_cloud_bigger" />
+
+            <ProgressBar
+                android:id="@+id/view_process_progress"
+                style="@style/Widget.ProgressBar.Vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:max="100"
+                android:progress="@{model.processProgress}"
+                tools:progress="82" />
+        </FrameLayout>
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:max="@{model.previewProgressMax}"
+            android:progress="@{model.previewProgress}"
+            android:progressDrawable="@drawable/seek_bar_progress"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:max="100"
+            tools:progress="50" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideLine"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.58" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideLine" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="73dp"
+            android:orientation="horizontal"
+            android:paddingBottom="11dp"
+            android:paddingTop="11dp"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            tools:listitem="@layout/item_video_frame_list" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/black_mask_translucent"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayout4"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/frameLayout4" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/ic_arrow_drop_down_white_24dp"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout4"
+            app:layout_constraintStart_toStartOf="@+id/frameLayout4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{model.startTimeString}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+            app:layout_constraintBottom_toTopOf="@+id/view1"
+            app:layout_constraintStart_toStartOf="@+id/frameLayout4"
+            tools:text="15:12" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout4"
+            android:layout_width="226dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/recyclerView">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="@mipmap/ic_video_chose_left"
+                app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+                app:layout_constraintTop_toTopOf="@+id/recyclerView" />
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@mipmap/ic_video_choose_right"
+                app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+                app:layout_constraintTop_toTopOf="@+id/recyclerView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_video_cut_hint"
+                android:gravity="center"
+                android:text="@{@string/intervalFormat(model.intervalTime)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                tools:text="15s" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/black_mask_translucent"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayout4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout4"
+            app:layout_constraintTop_toTopOf="@+id/frameLayout4" />
+
+
+        <RadioGroup
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/dialog_time_rb1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout4">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/dialog_time_rb1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/background_interval_button"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:onClick="@{model::onIntervalChose}"
+                android:text="15s"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/dialog_time_rb2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/background_interval_button"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:onClick="@{model::onIntervalChose}"
+                android:text="30s"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/dialog_time_rb3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/background_interval_button"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:onClick="@{model::onIntervalChose}"
+                android:text="45s"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/dialog_time_rb4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/background_interval_button"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:onClick="@{model::onIntervalChose}"
+                android:text="60s"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </RadioGroup>
+    </android.support.constraint.ConstraintLayout>
+</layout>
+

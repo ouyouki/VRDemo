@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onParamsChange"
+            type="android.databinding.adapters.SeekBarBindingAdapter.OnProgressChanged" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="244dp"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/black_mask_translucent">
+
+            <com.baidu.cloud.mediaproc.sample.widget.RangeSeekBar
+                android:id="@+id/bgm_time_interval"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:absoluteInterval="13000"
+                app:absoluteMaxValue="100000"
+                app:absoluteMinValue="0"
+                app:barHeight="10dp"
+                app:internalPadding="0dp"
+                app:lockRange="true"
+                app:rangeBackground="@mipmap/background_range_select"
+                app:rangeForeground="@mipmap/foreground_range_select"
+                app:thumbNormal="@drawable/ic_left_chose_red_24dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bgm_time_interval"
+                tools:text="00:05" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="拖动截取音乐"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bgm_time_interval" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.82"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bgm_time_interval"
+                tools:text="00:05" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@drawable/black_mask_translucent"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:text="@string/volume"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/white" />
+
+            <SeekBar
+                android:id="@+id/music_seek_volume"
+                style="@style/Widget.AppCompat.SeekBar.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:onProgressChanged="@{onParamsChange}"
+                android:progress="100" />
+
+            <TextView
+                android:id="@+id/music_tv_volume"
+                style="@style/SettingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="35dp"
+                android:text="100%" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/black_mask_translucent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackgroundBorderless"
+                android:drawablePadding="9dp"
+                android:drawableStart="@mipmap/ic_last_small"
+                android:text="上一步"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

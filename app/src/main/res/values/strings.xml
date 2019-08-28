@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">AR智能Demo</string>
+    <string name="capture_time">录制时长</string>
+    <string name="base_setting">基本设置</string>
+    <string name="capture_volume">录制音量</string>
+    <string name="setting_image">图像设置</string>
+    <string name="setting_brightness">亮&#160;&#160;度</string>
+    <string name="setting_contrast">对比度</string>
+    <string name="setting_saturation">饱和度</string>
+    <string name="setting_hue">色&#160;&#160;温</string>
+    <string name="setting_sharpness">锐&#160;&#160;度</string>
+    <string name="beauty_face">美颜</string>
+    <string name="beauty_param_skin">磨&#160;&#160;皮</string>
+    <string name="beauty_param_white">美&#160;&#160;白</string>
+    <string name="beauty_param_pink">粉&#160;&#160;嫩</string>
+    <string name="custom_filter">滤镜</string>
+    <string name="background_music">音乐设置</string>
+    <string name="volume">音量控制</string>
+    <string name="last_step">上一步</string>
+    <string name="save">保存</string>
+    <string name="confirm">确定</string>
+    <string name="progressFormat">%1$d</string>
+    <string name="percentFormat">%d%%</string>
+    <string name="capturedTimeFormat">%.1fs</string>
+    <string name="intervalFormat">%ds</string>
+
+    <string name="title_activity_streaming">AR直播Demo</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="label_settings">Settings</string>
+
+    <string name="msg_choose_role">请选择您在房间中的角色</string>
+
+    <string name="label_audience">高级观众</string>
+    <string name="label_broadcaster">大主播</string>
+    <string name="label_guest">普通观众</string>
+
+    <string name="label_confirm">Confirm</string>
+    <string name="startcapture">StartCapture</string>
+    <string name="startstream">开始推流</string>
+    <string name="stopcapture">关闭录屏</string>
+    <string name="request_call">请求\n连麦</string>
+    <string name="calling_des">正在等待，主播接受</string>
+    <string name="guest_tint">您是观众</string>
+    <string name="guest_tint_calling">您是连麦</string>
+    <string name="cancel">取消</string>
+
+
+    <string name="contest_not_start">答题还未开始</string>
+    <string name="contest_start">进入直播</string>
+    <string name="contest_no_right">观看中</string>
+</resources>

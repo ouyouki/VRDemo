@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="com.baidu.cloud.mediaproc.sample.ui.contest.viewmodel.ContestViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        tools:context=".ui.contest.ContestSplashActivity">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/background_contest2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.baidu.cloud.mediaproc.sample.widget.video.BDCloudVideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/transparent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_video_cut_hint"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@mipmap/ic_contest_revive"
+                    android:gravity="center_vertical"
+                    android:text="@{model.hasAnswerRight?model.reviverCount:@string/contest_no_right}"
+                    tools:text="复活卡：3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:text="@{model.playerCount}"
+                    tools:text="231235人" />
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="72dp"
+            android:background="@drawable/background_cancel_select"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:visibility="@{model.isQuestionDialogShow?View.VISIBLE:View.INVISIBLE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                android:layout_marginTop="63dp"
+                android:text="@{model.topic}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1. 请问一般人的心脏位于胸腔的哪个位置？" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="@{model.isAnswerShow?View.INVISIBLE:View.VISIBLE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                tools:visibility="visible">
+
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/selector_contest_radio_button_background"
+                    android:button="@android:color/transparent"
+                    android:enabled="@{model.hasAnswerRight}"
+                    android:onClick="@{model::onAnswerClick}"
+                    android:paddingStart="@dimen/activity_horizontal_margin"
+                    android:text="@{model.options[`A`]}"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_contest_radio_button_text"
+                    tools:text="A  偏左" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/selector_contest_radio_button_background"
+                    android:button="@android:color/transparent"
+                    android:enabled="@{model.hasAnswerRight}"
+                    android:onClick="@{model::onAnswerClick}"
+                    android:paddingStart="@dimen/activity_horizontal_margin"
+                    android:text="@{model.options[`B`]}"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_contest_radio_button_text"
+                    tools:text="B  中间" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/selector_contest_radio_button_background"
+                    android:button="@android:color/transparent"
+                    android:enabled="@{model.hasAnswerRight}"
+                    android:onClick="@{model::onAnswerClick}"
+                    android:paddingStart="@dimen/activity_horizontal_margin"
+                    android:text="@{model.options[`C`]}"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                    android:textColor="@drawable/selector_contest_radio_button_text"
+                    tools:text="C  偏右" />
+            </RadioGroup>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:visibility="@{model.isAnswerShow?View.VISIBLE:View.INVISIBLE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                tools:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginTop="20dp"
+                    android:indeterminateDrawable="@android:drawable/progress_indeterminate_horizontal"
+                    android:indeterminateOnly="false"
+                    android:max="@{model.answerPeopleCount}"
+                    android:progressDrawable="@drawable/horizontal_progress_bar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:max="29"
+                    tools:secondaryProgress="11" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:gravity="center_vertical"
+                    android:text="@{model.options[`A`]}"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    app:layout_constraintStart_toStartOf="@+id/progressBar"
+                    app:layout_constraintTop_toTopOf="@+id/progressBar"
+                    tools:text="A  偏左" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:gravity="center_vertical"
+                    android:text="@{model.answerCounts[`A`]}"
+                    android:textColor="#979797"
+                    app:layout_constraintEnd_toEndOf="@+id/progressBar"
+                    app:layout_constraintTop_toTopOf="@+id/progressBar"
+                    tools:text="11万" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginTop="20dp"
+                    android:indeterminateDrawable="@android:drawable/progress_indeterminate_horizontal"
+                    android:indeterminateOnly="false"
+                    android:max="@{model.answerPeopleCount}"
+                    android:progressDrawable="@drawable/horizontal_progress_bar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/progressBar"
+                    tools:max="29"
+                    tools:secondaryProgress="5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:gravity="center_vertical"
+                    android:text="@{model.options[`B`]}"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    app:layout_constraintStart_toStartOf="@+id/progressBar1"
+                    app:layout_constraintTop_toTopOf="@+id/progressBar1"
+                    tools:text="B  中间" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:gravity="center_vertical"
+                    android:text="@{model.answerCounts[`B`]}"
+                    android:textColor="#979797"
+                    app:layout_constraintEnd_toEndOf="@+id/progressBar1"
+                    app:layout_constraintTop_toTopOf="@+id/progressBar1"
+                    tools:text="5万" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar2"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginTop="20dp"
+                    android:indeterminateDrawable="@android:drawable/progress_indeterminate_horizontal"
+                    android:indeterminateOnly="false"
+                    android:max="@{model.answerPeopleCount}"
+                    android:progressDrawable="@drawable/horizontal_progress_bar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/progressBar1"
+                    tools:max="29"
+                    tools:progress="13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:gravity="center_vertical"
+                    android:text="@{model.options[`C`]}"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    app:layout_constraintStart_toStartOf="@+id/progressBar2"
+                    app:layout_constraintTop_toTopOf="@+id/progressBar2"
+                    tools:text="C  偏右" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:gravity="center_vertical"
+                    android:text="@{model.answerCounts[`C`]}"
+                    android:textColor="#979797"
+                    app:layout_constraintEnd_toEndOf="@+id/progressBar2"
+                    app:layout_constraintTop_toTopOf="@+id/progressBar2"
+                    tools:text="13万" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/background_capture_button"
+            android:elevation="8dp"
+            android:visibility="@{model.isQuestionDialogShow?View.VISIBLE:View.INVISIBLE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar">
+
+            <com.baidu.cloud.mediaproc.sample.widget.CaptureProgressView
+                android:id="@+id/countDownView"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:visibility="@{model.isAnswerShow?View.INVISIBLE:View.VISIBLE}"
+                app:capture_circle_starting_degree="-90"
+                app:capture_finished_color="#108CEE"
+                app:capture_finished_stroke_width="5dp"
+                app:capture_max="10"
+                app:capture_show_text="true"
+                app:capture_suffix_text=""
+                app:capture_text_color="@android:color/white"
+                app:capture_text_size="22sp"
+                app:capture_unfinished_color="@android:color/white"
+                app:capture_unfinished_stroke_width="5dp"
+                tools:capture_progress="8" />
+
+            <TextView
+                android:id="@+id/countDownText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@{model.countDown}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textStyle="bold"
+                android:visibility="@{model.isAnswerShow?View.INVISIBLE:View.VISIBLE}"
+                tools:text="2"
+                tools:textColor="#108CEE" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:background="@{model.hasAnswerRight?@drawable/transparent:@drawable/colorDialogBackgroundHeader}"
+                android:src="@{model.hasAnswerRight?(model.userAnswerRight?@drawable/ic_contest_right:@drawable/ic_contest_wrong):@drawable/ic_contest_logo}"
+                android:visibility="@{model.isAnswerShow?View.VISIBLE:View.INVISIBLE}" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="17dp"
+            android:text="答题方"
+            android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

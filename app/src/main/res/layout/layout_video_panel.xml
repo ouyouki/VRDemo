@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="com.baidu.cloud.mediaproc.sample.widget.video.VideoViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/item_video_controller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@android:color/black">
+
+        <ImageView
+            android:id="@+id/item_video_preview_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="@{model.previewVisibility}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:src="@{model.previewImage}"
+            tools:src="@mipmap/background_lss" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@{model.isBuffering?@drawable/black_mask_translucent:@drawable/videoForegroundClean}"
+            android:visibility="@{model.isPlaying?View.INVISIBLE:View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingEnd="@{model.isFullscreen?@dimen/controller_padding_start_fullscreen:@dimen/controller_padding_start_normal}"
+            android:paddingStart="@{model.isFullscreen?@dimen/controller_padding_start_fullscreen:@dimen/controller_padding_start_normal}"
+            android:paddingTop="@{model.isFullscreen?@dimen/controller_padding_start_fullscreen:@dimen/controller_padding_start_normal}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@android:color/transparent"
+                android:onClick="@{model::onClickFullscreen}"
+                android:src="@mipmap/ic_back"
+                android:visibility="@{model.isFullscreen?(model.showPanel?View.VISIBLE:View.INVISIBLE):View.GONE}"
+                app:layout_constraintDimensionRatio="1,1"
+                tools:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@{model.isFullscreen?@dimen/controller_padding_start_fullscreen:@dimen/controller_padding_start_normal}"
+                android:text="@{model.description}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                android:visibility="@{model.showPanel?View.VISIBLE:View.INVISIBLE}"
+                tools:text="Trump 现场教学，推特怒怼地球人" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:indeterminateDrawable="@drawable/layer_circle_progress"
+            android:indeterminateDuration="1000"
+            android:visibility="@{model.isBuffering?View.VISIBLE:View.INVISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{model.cacheInfo}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+            android:visibility="@{model.isBuffering?View.VISIBLE:View.INVISIBLE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar"
+            tools:text="加载中" />
+
+        <ImageButton
+            android:id="@+id/item_video_load"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@android:color/transparent"
+            android:onClick="@{model::onPauseResume}"
+            android:src="@{model.hasError?@drawable/ic_refresh:(model.isPlaying?@drawable/ic_pause:@drawable/ic_play)}"
+            android:visibility="@{model.isBuffering?View.INVISIBLE:(model.showPanel?View.VISIBLE:View.INVISIBLE)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="invisible" />
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:max="1000"
+            android:progress="@{model.progress}"
+            android:progressDrawable="@drawable/seek_bar_progress"
+            android:visibility="@{model.isFullscreen?View.INVISIBLE:model.showPanel?View.INVISIBLE:View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:max="100"
+            tools:progress="50" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/background_video_fullscreen_gradient"
+            android:visibility="@{model.isFullscreen?(model.showPanel?View.VISIBLE:View.INVISIBLE):View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:gravity="center_vertical"
+            android:paddingEnd="@{model.isFullscreen?@dimen/controller_padding_start_fullscreen:@dimen/controller_padding_start_normal}"
+            android:paddingStart="@{model.isFullscreen?@dimen/controller_padding_start_fullscreen:@dimen/controller_padding_start_normal}"
+            android:visibility="@{model.showPanel?View.VISIBLE:View.INVISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@{model.isPlaying?@drawable/ic_pause_small:@drawable/ic_play_small}"
+                tools:src="@drawable/ic_play_small" />
+
+            <TextView
+                android:id="@+id/current_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@{model.isFullscreen?@dimen/controller_time_margin_fullscreen:@dimen/controller_time_margin_normal}"
+                android:text="@{model.currentTime}"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Inverse"
+                tools:layout_marginStart="@dimen/controller_time_margin_normal"
+                tools:text="00:25" />
+
+            <SeekBar
+                android:id="@+id/item_video_seek"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="1000"
+                android:maxHeight="3dp"
+                android:onStartTrackingTouch="@{model.onStartTrackingTouch}"
+                android:onStopTrackingTouch="@{model.onStopTrackingTouch}"
+                android:progress="@{model.progress}"
+                android:progressDrawable="@drawable/seek_bar_progress"
+                android:secondaryProgress="@{model.secondaryProgress}"
+                android:thumb="@drawable/seek_bar_thumb"
+                tools:max="100"
+                tools:progress="50" />
+
+            <TextView
+                android:id="@+id/end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@{model.isFullscreen?@dimen/controller_time_margin_fullscreen:@dimen/controller_time_margin_normal}"
+                android:text="@{model.endTime}"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Inverse"
+                tools:layout_marginEnd="@dimen/controller_time_margin_normal"
+                tools:text="00:30" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:onClick="@{model::onClickFullscreen}"
+                android:src="@{model.isFullscreen?@drawable/ic_scaleback_small:@drawable/ic_scale_small}"
+                tools:src="@drawable/ic_scale_small" />
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

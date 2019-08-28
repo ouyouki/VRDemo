@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v19\\values-v19.xml",
+            "map": [
+                {
+                    "source": "D:\\workspace\\android\\AndroidStudioProjects\\VRDemo\\app\\src\\main\\res\\values-v19\\styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "56",
+                        "endLines": "12",
+                        "endColumns": "12",
+                        "endOffsets": "630"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "11",
+                        "endColumns": "12",
+                        "endOffsets": "629"
+                    }
+                }
+            ]
+        }
+    ]
+}
